@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login</title>
+    <link rel="stylesheet" href="Page/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS Public Key
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Signup Form -->
+        <div id="signup">
+            <h2>Signup</h2>
+            <input type="email" id="signup-email" placeholder="Enter Email" required>
+            <button onclick="sendOTP()">Send OTP</button>
+            <input type="text" id="signup-otp" placeholder="Enter OTP" required>
+            <button onclick="verifyOTP()">Verify OTP</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Enter Email" required>
+            <button onclick="sendLoginOTP()">Send OTP</button>
+            <input type="text" id="login-otp" placeholder="Enter OTP" required>
+            <button onclick="verifyLoginOTP()">Verify OTP</button>
+        </div>
+
+        
+    </div>
+
+    <script src="Page/script.js"></script>
+
+</body>
+</html>
